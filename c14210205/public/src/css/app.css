@@ -1,0 +1,42 @@
+.text-center {
+  text-align: center;
+}
+
+.drawer-option {
+  padding: 16px;
+}
+
+/* copy */
+
+.mdl-layout__header{
+  background-color: #ffcc00;
+}
+
+
+.mdl-layout-title{
+  color: black;
+  font-size: 24px;  
+}
+
+.mat-typography h1 {
+  font-size: 36px; 
+}
+
+.mdl-navigation__link {
+  font-size: 20px; 
+  color: black !important;
+}
+
+.mdl-layout--large-screen-only .mdl-navigation__link {
+  color: black;
+}
+
+.mdl-layout__drawer-button {
+  color: black;
+}
+
+.mdl-layout__drawer {
+  background-color: #ffcc00;
+}
+
+

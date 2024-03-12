@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FitnessFriend</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="/src/css/app.css">
+  <link rel="stylesheet" href="/src/css/feed.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="FitnessFriend">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-57x57.png" sizes="57x57">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-60x60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-72x72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-144x144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-152x152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="/src/images/icons/apple-icon-180x180.png" sizes="180x180">
+  <meta name="msapplication-TileImage" content="/src/images/icons/app-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#3f51b5">
+  <script>
+    localStorage.setItem('w1', 'Running');
+    localStorage.setItem('w2', 'Swimming');
+    localStorage.setItem('w3', 'Yoga');
+    localStorage.setItem('w4', 'Hiking');
+    localStorage.setItem('w5', 'Cycling');
+
+    var workout1 = localStorage.getItem('w1');
+    var workout2 = localStorage.getItem('w2');
+    var workout3 = localStorage.getItem('w3');
+    var workout4 = localStorage.getItem('w4');
+    var workout5 = localStorage.getItem('w5');
+  </script>
+  <script>
+    var WD1 = {
+        description: "Description : Running in the forest",
+        duration: "Duration : 30 minutes",
+        intensity: "Intensity : High",
+        date: "Date : 29 July 2024",
+        url: 'https://hips.hearstapps.com/hmg-prod/images/running-is-one-of-the-best-ways-to-stay-fit-royalty-free-image-1036780592-1553033495.jpg?crop=0.88976xw:1xh;center,top&resize=1200:*'
+    };
+    var workoutDetailsJSON1 = JSON.stringify(WD1);
+    localStorage.setItem('d1', workoutDetailsJSON1);
+</script>
+<script>
+  var WD2 = {
+      description: "Description : Swimming in the swimmingpool",
+      duration: "Duration : 60 minutes",
+      intensity: "Intensity : Medium",
+      date: "Date : 30 December 2024",
+      url: 'https://www.health.com/thmb/Yv4HuoQyNbHNNxgtOTm63zqxurQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-Swimming-080c78802f384a4687df5a3b13d5611e-3719a8e40a3c4c43a63a4d795e47c505.jpg'
+  };
+  var workoutDetailsJSON2 = JSON.stringify(WD2);
+  localStorage.setItem('d2', workoutDetailsJSON2);
+</script>
+<script>
+  var WD3 = {
+      description: "Description : Peace Yoga Class",
+      duration: "Duration : 70 minutes",
+      intensity: "Intensity : Low",
+      date: "Date : 15 August 2024",
+      url: 'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/29044522/Yoga.jpg.webp'
+  };
+  var workoutDetailsJSON3 = JSON.stringify(WD3);
+  localStorage.setItem('d3', workoutDetailsJSON3);
+</script>
+<script>
+  var WD4 = {
+      description: "Description : Hiking Mt. Bromo",
+      duration: "Duration : 1 Day",
+      intensity: "Intensity : Very High",
+      date: "Date : 20 August 2025",
+      url: 'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/couple-hiking-mountain-climbing-1296x728-header.jpg?w=1155&h=1528'
+  };
+  var workoutDetailsJSON4 = JSON.stringify(WD4);
+  localStorage.setItem('d4', workoutDetailsJSON4);
+</script>
+<script>
+  var WD5 = {
+      description: "Description : Cycling in Town Square",
+      duration: "Duration : 120 Minutes",
+      intensity: "Intensity : Medium",
+      date: "Date : 1 Januari 2025",
+      url: 'https://www.siroko.com/blog/c/app/uploads/2021/07/efectos-positivos_f766ef96-0811-452d-bbf8-ec38d244637a-1440x900.jpg.webp'
+  };
+  var workoutDetailsJSON5 = JSON.stringify(WD5);
+  localStorage.setItem('d5', workoutDetailsJSON5);
+</script>
+</head>
+<body>
+<div class="background"></div>
+<div id="app">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">FitnessFriend</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="/">Home</a>
+          <a class="mdl-navigation__link" href="/help">Help</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        FitnessFriend
+        <button class="mdl-layout__drawer-button" style="color: black;">
+          <i class="material-icons">menu</i>
+        </button>
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/">Home</a>
+        <a class="mdl-navigation__link" href="/help">Help</a>
+      </nav>
+    </div>
+    <div>
+      <header>
+        <p style="color: #e6d200; font-size: 30px; margin-top: 15px;">Workouts</p>
+      </header>
+    </div>
+      
+  
+    <div class="container_card">
+      <a href="/detail/detail.html" class="card" onclick="updateSelectedWorkout('w1','d1')">
+        <div class="card__image" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/running-is-one-of-the-best-ways-to-stay-fit-royalty-free-image-1036780592-1553033495.jpg?crop=0.88976xw:1xh;center,top&resize=1200:*');"></div>
+        <div class="card__content">
+          <div class="card__title" id="workout1Title">Workout 1</div>
+        </div>
+      </a>
+  
+      <a href="/detail/detail2.html" class="card" onclick="updateSelectedWorkout('w2','d2')">
+        <div class="card__image" style="background-image: url('https://www.health.com/thmb/Yv4HuoQyNbHNNxgtOTm63zqxurQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-Swimming-080c78802f384a4687df5a3b13d5611e-3719a8e40a3c4c43a63a4d795e47c505.jpg');"></div>
+        <div class="card__content">
+          <div class="card__title" id="workout2Title">Workout 2</div>
+        </div>
+      </a>
+  
+      <a href="/detail/detail3.html" class="card" onclick="updateSelectedWorkout('w3','d3')">
+        <div class="card__image" style="background-image: url('https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/29044522/Yoga.jpg.webp');"></div>
+        <div class="card__content">
+          <div class="card__title" id="workout3Title">Workout 3</div>
+        </div>
+      </a>
+  
+      <a href="/detail/detail4.html" class="card" onclick="updateSelectedWorkout('w4','d4')">
+        <div class="card__image" style="background-image: url('https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/couple-hiking-mountain-climbing-1296x728-header.jpg?w=1155&h=1528');"></div>
+        <div class="card__content">
+          <div class="card__title" id="workout4Title">Workout 4</div>
+        </div>
+      </a>
+  
+      <a href="/detail/detail5.html" class="card" onclick="updateSelectedWorkout('w5','d5')">
+        <div class="card__image" style="background-image: url('https://www.siroko.com/blog/c/app/uploads/2021/07/efectos-positivos_f766ef96-0811-452d-bbf8-ec38d244637a-1440x900.jpg.webp');"></div>
+        <div class="card__content">
+          <div class="card__title" id="workout5Title">Workout 5</div>
+        </div>
+      </a>
+    <!-- </div>
+      <div class="floating-button">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+                id="share-image-button">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+      </div> -->
+    </main>
+  </div>
+</div>
+<script defer src="/src/js/material.min.js"></script>
+<script src="/src/js/promise.js"></script>
+<script src="/src/js/fetch.js"></script>
+<script src="/src/js/app.js"></script>
+<script src="/src/js/feed.js"></script>
+<script>
+    function updateSelectedWorkout(workoutKey, detailKey) {
+            sessionStorage.setItem('selectedWorkout', workoutKey);
+            sessionStorage.setItem('selectedDetail', detailKey);
+    }
+    document.getElementById('workout1Title').innerText = workout1;
+    document.getElementById('workout2Title').innerText = workout2;
+    document.getElementById('workout3Title').innerText = workout3;
+    document.getElementById('workout4Title').innerText = workout4;
+    document.getElementById('workout5Title').innerText = workout5;
+</script>
+</body>
+</html>

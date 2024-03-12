@@ -1,0 +1,34 @@
+
+.mdl-button {
+  margin: 10px;
+}
+
+.mdl-layout__header{
+  background-color: #e6d200;
+}
+
+.mdl-layout-title{
+  color: black;
+  font-size: 24px;  
+}
+
+.mat-typography h1 {
+  font-size: 36px; 
+}
+
+.mdl-navigation__link {
+  font-size: 20px;
+  color: black !important;
+}
+
+.mdl-layout--large-screen-only .mdl-navigation__link {
+  color: black;
+}
+
+.mdl-layout__drawer-button {
+  color: black;
+}
+
+.mdl-layout__drawer {
+  background-color: #e6d200;
+}
